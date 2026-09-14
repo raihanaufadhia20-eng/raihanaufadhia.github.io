@@ -324,3 +324,9 @@ a:hover {
 .hero.section-content.active {
     display: flex;
 }
+.container {
+    width: 100%;
+    max-width: 100% !important;
+    padding: 0 5% 60px 5%;
+    margin-top: 100px; /* Memberi ruang di bawah navbar supaya tidak bertabrakan */
+}
