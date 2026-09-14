@@ -95,19 +95,13 @@ h3 {
     text-decoration: underline;
 }
 
-.project-item {
-    overflow: hidden; /* Mencegah gambar/konten keluar dari garis kartu */
-    box-sizing: border-box;
-}
-
 .project-img {
     width: 100%;
-    max-width: 100%;
-    height: auto;          /* Mengikuti proporsi asli gambar */
-    max-height: 450px;     /* Bebaskan tingginya supaya mockup HP muat utuh */
-    object-fit: contain;   /* Menampilkan seluruh gambar tanpa memotong sama sekali */
+    max-width: 320px;     /* Membatasi lebar gambar HP agar tidak kegedean */
+    height: auto;          /* Proporsi asli tetap terjaga */
+    object-fit: contain;
     border-radius: 8px;
-    margin: 12px 0;
+    margin: 16px auto;     /* Mengetengahkan gambar di dalam kartu */
     border: 1px solid #30363d;
     display: block;
 }
