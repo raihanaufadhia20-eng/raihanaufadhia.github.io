@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <!-- NAVBAR ATAS -->
+    <!-- NAVBAR ATAS (FIXED / MELAYANG) -->
     <nav class="navbar">
-        <div class="logo" onclick="showSection('hero')" style="cursor: pointer;">
+        <div class="logo" onclick="showSection('hero')">
             <span class="brand-name">Raihan Aufadhia</span>
             <span class="brand-sub">INFORMATION SYSTEMS</span>
         </div>
@@ -33,7 +33,7 @@
                 <span id="typed-text"></span><span class="cursor">&nbsp;</span>
             </p>
             <p class="about-card-text">
-                Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch.
+                Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch. Driven by UI/UX design, user research, and product strategy.
             </p>
             <a href="#" onclick="showSection('projects')" class="hero-btn">
                 <span class="arrow-icon">↘</span> VIEW PROJECTS
@@ -41,6 +41,7 @@
         </div>
     </section>
 
+    <!-- MAIN CONTAINER (ABOUT, PROJECTS, CONTACT) -->
     <main class="container">
         <!-- SECTION ABOUT ME -->
         <section id="about" class="section-content">
@@ -57,7 +58,7 @@
             <h2 class="section-title">Projects</h2>
             
             <div class="project-item">
-                <h3> MyStyle </h3>
+                <h3>MyStyle</h3>
                 <div class="project-gallery">
                     <img src="image/preview_fix 1.png" alt="Preview Copyin 1" class="project-img">
                     <img src="image/preview_fix 2.png" alt="Preview Copyin 2" class="project-img">
@@ -78,9 +79,11 @@
         <!-- SECTION CONTACT -->
         <section id="contact" class="section-content">
             <h2 class="section-title">Contact</h2>
-            <p class="contact-card">
-                Email: <a href="mailto:raihanaufadhia20@gmail.com">raihanaufadhia20@gmail.com</a>
-            </p>
+            <div class="project-item">
+                <p class="contact-card">
+                    Email: <a href="mailto:raihanaufadhia20@gmail.com">raihanaufadhia20@gmail.com</a>
+                </p>
+            </div>
         </section>
     </main>
 

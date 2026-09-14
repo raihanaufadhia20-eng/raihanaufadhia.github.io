@@ -13,7 +13,7 @@ html {
 }
 
 body {
-    background-color: #0d1117; /* Dark background */
+    background-color: #0d1117;
     color: #f0f6fc;
     min-height: 100vh;
     overflow-x: hidden;
@@ -21,23 +21,27 @@ body {
 }
 
 /* ==========================================
-   2. NAVBAR
+   2. NAVBAR (FIXED AT TOP WITH BLUR)
    ========================================== */
 .navbar {
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 24px 5%;
-    position: absolute;
+    padding: 20px 5%;
+    position: fixed;
     top: 0;
     left: 0;
-    z-index: 10;
+    z-index: 100;
+    background-color: rgba(13, 17, 23, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
 }
 
 .logo {
     display: flex;
     flex-direction: column;
+    cursor: pointer;
 }
 
 .brand-name {
@@ -68,7 +72,7 @@ body {
 }
 
 .nav-links a:hover {
-    color: #ff9500; /* iOS Orange */
+    color: #ff9500;
 }
 
 .nav-social a {
@@ -79,26 +83,25 @@ body {
 }
 
 /* ==========================================
-   3. HERO SECTION (TAMPILAN UTAMA)
+   3. HERO SECTION (HOME)
    ========================================== */
 .hero {
     position: relative;
     width: 100%;
-    min-height: 90vh;
+    min-height: 100vh;
     display: flex;
     align-items: center;
-    padding: 120px 5% 40px 5%;
+    padding: 140px 5% 60px 5%;
     background-color: #0d1117;
 }
 
-/* Background Ambient Glow */
 .glow-bg {
     position: absolute;
-    top: 10%;
+    top: 15%;
     right: -5%;
-    width: 650px;
-    height: 650px;
-    background: radial-gradient(circle, rgba(255, 149, 0, 0.35) 0%, rgba(138, 43, 226, 0.15) 40%, rgba(13, 17, 23, 0) 70%);
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(255, 149, 0, 0.3) 0%, rgba(138, 43, 226, 0.15) 40%, rgba(13, 17, 23, 0) 70%);
     filter: blur(80px);
     border-radius: 50%;
     pointer-events: none;
@@ -106,12 +109,8 @@ body {
 }
 
 @keyframes floatGlow {
-    0% {
-        transform: translate(0, 0) scale(1);
-    }
-    100% {
-        transform: translate(-40px, 30px) scale(1.1);
-    }
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-40px, 30px) scale(1.1); }
 }
 
 .hero-content {
@@ -120,7 +119,7 @@ body {
 }
 
 .hero-title {
-    font-size: 4rem;
+    font-size: 3.8rem;
     font-weight: 800;
     line-height: 1.05;
     letter-spacing: -1.5px;
@@ -128,9 +127,8 @@ body {
     margin-bottom: 12px;
 }
 
-/* Typed Text & Cursor Style */
 .hero-description {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     color: #ff9500;
     font-weight: 600;
     margin-bottom: 24px;
@@ -158,7 +156,6 @@ body {
     max-width: 620px;
 }
 
-/* Hero Button */
 .hero-btn {
     display: inline-flex;
     align-items: center;
@@ -168,7 +165,6 @@ body {
     font-size: 0.85rem;
     font-weight: 600;
     letter-spacing: 1px;
-    transition: transform 0.2s ease;
 }
 
 .arrow-icon {
@@ -189,27 +185,23 @@ body {
 }
 
 /* ==========================================
-   4. MAIN CONTAINER & SECTION TITLES
+   4. MAIN CONTAINER & SECTIONS
    ========================================== */
 .container {
     width: 100%;
     max-width: 100% !important;
     padding: 0 5% 60px 5%;
+    margin-top: 100px; /* Jarak aman agar tidak tertutup navbar */
 }
 
 .section-title {
-    font-size: 1.25rem;
-    font-weight: 600;
-    color: #8b949e;
-    text-transform: uppercase;
-    letter-spacing: 1px;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    letter-spacing: -0.5px;
     margin-bottom: 24px;
-    margin-top: 40px;
 }
 
-/* ==========================================
-   5. PROJECT CARDS & GALLERY
-   ========================================== */
 .project-item {
     width: 100%;
     background-color: #161b22;
@@ -217,11 +209,6 @@ body {
     border-radius: 12px;
     padding: 32px;
     margin-bottom: 32px;
-    transition: border-color 0.2s ease;
-}
-
-.project-item:hover {
-    border-color: #484f58;
 }
 
 .project-item h3 {
@@ -241,34 +228,19 @@ body {
     width: 100%;
     height: auto;
     display: block;
-    object-fit: cover;
     border-radius: 8px;
     border: 1px solid #30363d;
-    transition: border-color 0.2s ease, transform 0.2s ease;
+    transition: border-color 0.2s ease;
 }
 
 .project-img:hover {
     border-color: #ff9500;
-    transform: scale(1.002);
 }
 
 .project-item p {
     color: #c9d1d9;
     font-size: 1rem;
     line-height: 1.6;
-}
-
-/* ==========================================
-   6. CONTACT SECTION & FOOTER LINKS
-   ========================================== */
-.contact-section {
-    margin-top: 40px;
-    padding-bottom: 60px;
-}
-
-.contact-card {
-    font-size: 1.1rem;
-    color: #c9d1d9;
 }
 
 a {
@@ -281,52 +253,30 @@ a:hover {
 }
 
 /* ==========================================
-   7. RESPONSIVE DESIGN (MOBILE ADAPTATION)
-   ========================================== */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-    }
-
-    .hero-title {
-        font-size: 2.5rem;
-    }
-
-    .hero-description {
-        font-size: 1.2rem;
-    }
-
-    .project-item {
-        padding: 20px;
-    }
-
-    .glow-bg {
-        width: 350px;
-        height: 350px;
-        right: -20%;
-    }
-}
-/* ==========================================
-   8. DYNAMIC SECTION SWITCHING
+   5. DYNAMIC SECTION SWITCHING
    ========================================== */
 .section-content {
-    display: none; /* Sembunyikan semua section secara default */
+    display: none;
     opacity: 0;
-    transition: opacity 0.4s ease-in-out;
+    transition: opacity 0.3s ease-in-out;
 }
 
 .section-content.active {
-    display: block; /* Tampilkan section yang aktif */
+    display: block;
     opacity: 1;
 }
 
-/* Khusus hero section jika aktif */
 .hero.section-content.active {
     display: flex;
 }
-.container {
-    width: 100%;
-    max-width: 100% !important;
-    padding: 0 5% 60px 5%;
-    margin-top: 100px; /* Memberi ruang di bawah navbar supaya tidak bertabrakan */
+
+/* ==========================================
+   6. RESPONSIVE MOBILE
+   ========================================== */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    .hero-title { font-size: 2.5rem; }
+    .hero-description { font-size: 1.1rem; }
+    .project-item { padding: 20px; }
+    .glow-bg { width: 350px; height: 350px; right: -20%; }
 }
