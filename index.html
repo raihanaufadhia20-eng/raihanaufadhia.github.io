@@ -8,42 +8,83 @@
 </head>
 <body>
 
-    <div class="container">
-        <h1>Raihan Aufadhia</h1>
-        <p class="sub-title"><span id="typed-text"></span><span class="cursor">&nbsp;</span></p>
+    <!-- NAVBAR ATAS -->
+    <nav class="navbar">
+        <div class="logo">
+            <span class="brand-name">Raihan Aufadhia</span>
+            <span class="brand-sub">INFORMATION SYSTEMS</span>
+        </div>
+        <ul class="nav-links">
+            <li><a href="#about">About Me</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-social">
+            <a href="mailto:raihanaufadhia20@gmail.com" aria-label="Email">in</a>
+        </div>
+    </nav>
 
-        <h2>About Me</h2>
-        <p class="card-text">
-            Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch. Driven by UI/UX design, user research, and product strategy.
-        </p>
+    <!-- HERO SECTION (HALAMAN UTAMA) -->
+    <section class="hero" id="about">
+        <!-- Glow Oranye Abstrak Background -->
+        <div class="glow-bg"></div>
 
-        <h2>Projects</h2>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                Raihan Aufadhia
+            </h1>
+            
+            <!-- Dynamic Typed Text -->
+            <p class="hero-description">
+                <span id="typed-text"></span><span class="cursor">&nbsp;</span>
+            </p>
 
+            <p class="about-card-text">
+                Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch. Driven by UI/UX design, user research, and product strategy.
+            </p>
+
+            <a href="#projects" class="hero-btn">
+                <span class="arrow-icon">↘</span> VIEW PROJECTS
+            </a>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT / PROJECTS SECTION -->
+    <main class="container" id="projects">
+        <h2 class="section-title">Projects</h2>
+
+        <!-- PROJECT 1: Copyin / MyStyle -->
         <div class="project-item">
-    <h3>Copyin - Printing & Stationeries App</h3>
-    
-    <!-- Tambahkan baris tag img ini -->
-    <img src="image/preview_fix 1.png" alt="Preview MyStyle" class="project-img">
-    <img src="image/preview_fix 2.png" alt="Preview MyStyle" class="project-img">
-    <img src="image/preview_fix 3.png" alt="Preview MyStyle" class="project-img">
-    
-    <p>MyStyle — Branded Fashion E-Commerce
+            <h3>Copyin - Printing & Stationeries App</h3>
+            
+            <div class="project-gallery">
+                <img src="image/preview_fix 1.png" alt="Preview Copyin 1" class="project-img">
+                <img src="image/preview_fix 2.png" alt="Preview Copyin 2" class="project-img">
+                <img src="image/preview_fix 3.png" alt="Preview Copyin 3" class="project-img">
+            </div>
+            
+            <p>
+                <strong>MyStyle — Branded Fashion E-Commerce</strong><br>
+                A mobile e-commerce platform designed for branded fashion shopping. Focused on creating an intuitive user experience, seamless checkout flow, and a clean, modern aesthetic.
+            </p>
+        </div>
 
-A mobile e-commerce platform designed for branded fashion shopping. Focused on creating an intuitive user experience, seamless checkout flow, and a clean, modern aesthetic.</p>
-</div>
-
+        <!-- PROJECT 2 -->
         <div class="project-item">
             <h3>Project 2</h3>
             <p>Deskripsi singkat project kedua.</p>
         </div>
 
-        <h2>Contact</h2>
-        <p class="contact-card">
-            Email: <a href="mailto:raihanaufadhia20@gmail.com">raihanaufadhia20@gmail.com</a>
-        </p>
-    </div>
+        <!-- CONTACT SECTION -->
+        <section id="contact" class="contact-section">
+            <h2 class="section-title">Contact</h2>
+            <p class="contact-card">
+                Email: <a href="mailto:raihanaufadhia20@gmail.com">raihanaufadhia20@gmail.com</a>
+            </p>
+        </section>
+    </main>
 
-    <!-- Menghubungkan ke file JS terpisah -->
+    <!-- FILE SCRIPT JS -->
     <script src="script.js"></script>
 </body>
 </html>
