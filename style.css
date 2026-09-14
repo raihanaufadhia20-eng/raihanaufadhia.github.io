@@ -1,107 +1,151 @@
+/* ==========================================================================
+   1. RESET & BASE STYLES
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
 }
 
 body {
-    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
-    background-color: #0d1117;
-    color: #c9d1d9;
-    line-height: 1.6;
-    padding: 50px 20px;
-    display: flex;
-    justify-content: center;
-}
-
-.container {
-    max-width: 680px;
     width: 100%;
+    min-height: 100vh;
+    background-color: #0d1117; /* Dark background */
+    color: #f0f6fc;            /* Text color */
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-/* Header Utama */
+/* ==========================================================================
+   2. FULL-WIDTH LAYOUT CONTAINER
+   ========================================================================== */
+main, .container {
+    width: 100%;
+    max-width: 100% !important; /* Memenuhi lebar layar penuh */
+    padding: 48px 4%;           /* Padding samping 4% agar rapi di layar lebar */
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   3. HEADER & PROFILE SECTION
+   ========================================================================== */
+header, .profile-section {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
 h1 {
-    font-size: 2.4rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    color: #f0f6fc;
-    letter-spacing: -0.02em;
+    color: #ffffff;
+    letter-spacing: -0.5px;
+    margin-bottom: 8px;
 }
 
-/* Sub-title & Animasi Ketik */
-.sub-title {
-    color: #58a6ff;
-    font-weight: 600;
-    font-size: 1.05rem;
-    margin-top: 6px;
-    margin-bottom: 28px;
-    min-height: 1.6em;
-}
-
-.cursor {
-    display: inline-block;
-    background-color: #58a6ff;
-    width: 2px;
-    margin-left: 2px;
-    animation: blink 0.8s infinite;
-}
-
-@keyframes blink {
-    0%, 100% { opacity: 1; }
-    50% { opacity: 0; }
-}
-
-/* Section Title */
-h2 {
-    font-size: 1.25rem;
-    color: #8b949e;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
-    border-bottom: 1px solid #30363d;
-    padding-bottom: 8px;
-    margin-top: 36px;
-    margin-bottom: 16px;
-}
-
-/* Project Sub-title */
-h3 {
-    color: #f0f6fc;
+.subtitle {
     font-size: 1.1rem;
-    margin-bottom: 6px;
-}
-
-/* Box & Hover Styles */
-.card-text, .project-item, .contact-card {
-    background-color: #161b22;
-    border: 1px solid #30363d;
-    border-radius: 10px;
-    padding: 18px 20px;
-    margin-bottom: 14px;
-    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.card-text:hover, .project-item:hover, .contact-card:hover {
-    transform: translateY(-3px);
-    border-color: #58a6ff;
-    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
-}
-
-.contact-card a {
-    color: #58a6ff;
-    text-decoration: none;
+    color: #ff9500; /* iOS System Orange Accent */
     font-weight: 500;
 }
 
-.contact-card a:hover {
-    text-decoration: underline;
+/* ==========================================================================
+   4. SECTION TITLES
+   ========================================================================== */
+h2, .section-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 16px;
+    margin-top: 32px;
+}
+
+/* ==========================================================================
+   5. CARDS (ABOUT & PROJECTS) - FULL WIDTH
+   ========================================================================== */
+.about-card, .project-item {
+    width: 100%;
+    background-color: #161b22;
+    border: 1px solid #30363d;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.about-card p, .project-item p {
+    color: #c9d1d9;
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+/* ==========================================================================
+   6. PROJECT IMAGES & FULL PREVIEW
+   ========================================================================== */
+.project-item h3 {
+    font-size: 1.4rem;
+    color: #ffffff;
+    margin-bottom: 16px;
+}
+
+/* Wrapper gambar agar memenuhi lebar kartu secara presisi */
+.project-img-wrapper, .project-item a {
+    display: block;
+    width: 100%;
+    text-decoration: none;
 }
 
 .project-img {
     width: 100%;
-    max-width: 320px;     /* Membatasi lebar gambar HP agar tidak kegedean */
-    height: auto;          /* Proporsi asli tetap terjaga */
-    object-fit: contain;
-    border-radius: 8px;
-    margin: 16px auto;     /* Mengetengahkan gambar di dalam kartu */
-    border: 1px solid #30363d;
+    height: auto;
     display: block;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 1px solid #30363d;
+    margin: 16px 0;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+/* Efek hover interaktif saat kursor di atas gambar */
+.project-img:hover {
+    transform: scale(1.005);
+    border-color: #ff9500; /* Glow oranye halus */
+}
+
+/* ==========================================================================
+   7. LINKS & BUTTONS
+   ========================================================================== */
+a {
+    color: #ff9500;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.project-link {
+    display: inline-block;
+    margin-top: 12px;
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+/* ==========================================================================
+   8. RESPONSIVE DESIGN (MOBILE ADAPTATION)
+   ========================================================================== */
+@media (max-width: 768px) {
+    main, .container {
+        padding: 24px 16px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    .about-card, .project-item {
+        padding: 16px;
+    }
 }
