@@ -306,3 +306,21 @@ a:hover {
         right: -20%;
     }
 }
+/* ==========================================
+   8. DYNAMIC SECTION SWITCHING
+   ========================================== */
+.section-content {
+    display: none; /* Sembunyikan semua section secara default */
+    opacity: 0;
+    transition: opacity 0.4s ease-in-out;
+}
+
+.section-content.active {
+    display: block; /* Tampilkan section yang aktif */
+    opacity: 1;
+}
+
+/* Khusus hero section jika aktif */
+.hero.section-content.active {
+    display: flex;
+}

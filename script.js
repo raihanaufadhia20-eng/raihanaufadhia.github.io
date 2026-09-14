@@ -11,3 +11,19 @@ function typeWriter() {
 }
 
 window.onload = typeWriter;
+function showSection(sectionId) {
+    // Sembunyikan semua section
+    const sections = document.querySelectorAll('.section-content');
+    sections.forEach(section => {
+        section.classList.remove('active');
+    });
+
+    // Tampilkan section yang dipilih
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        targetSection.classList.add('active');
+    }
+
+    // Scroll otomatis ke atas halaman
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+}

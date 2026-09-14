@@ -10,73 +10,73 @@
 
     <!-- NAVBAR ATAS -->
     <nav class="navbar">
-        <div class="logo">
+        <div class="logo" onclick="showSection('hero')" style="cursor: pointer;">
             <span class="brand-name">Raihan Aufadhia</span>
             <span class="brand-sub">INFORMATION SYSTEMS</span>
         </div>
         <ul class="nav-links">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#" onclick="showSection('about')">About Me</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
         <div class="nav-social">
             <a href="mailto:raihanaufadhia20@gmail.com" aria-label="Email">in</a>
         </div>
     </nav>
 
-    <!-- HERO SECTION (HALAMAN UTAMA) -->
-    <section class="hero" id="about">
-        <!-- Glow Oranye Abstrak Background -->
+    <!-- HERO SECTION (HOME) -->
+    <section id="hero" class="hero section-content active">
         <div class="glow-bg"></div>
-
         <div class="hero-content">
-            <h1 class="hero-title">
-                Raihan Aufadhia
-            </h1>
-            
-            <!-- Dynamic Typed Text -->
+            <h1 class="hero-title">Raihan Aufadhia</h1>
             <p class="hero-description">
                 <span id="typed-text"></span><span class="cursor">&nbsp;</span>
             </p>
-
             <p class="about-card-text">
-                Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch. Driven by UI/UX design, user research, and product strategy.
+                Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch.
             </p>
-
-            <a href="#projects" class="hero-btn">
+            <a href="#" onclick="showSection('projects')" class="hero-btn">
                 <span class="arrow-icon">↘</span> VIEW PROJECTS
             </a>
         </div>
     </section>
 
-    <!-- MAIN CONTENT / PROJECTS SECTION -->
-    <main class="container" id="projects">
-        <h2 class="section-title">Projects</h2>
-
-        <!-- PROJECT 1: Copyin / MyStyle -->
-        <div class="project-item">
-            <h3>Copyin - Printing & Stationeries App</h3>
-            
-            <div class="project-gallery">
-                <img src="image/preview_fix 1.png" alt="Preview Copyin 1" class="project-img">
-                <img src="image/preview_fix 2.png" alt="Preview Copyin 2" class="project-img">
-                <img src="image/preview_fix 3.png" alt="Preview Copyin 3" class="project-img">
+    <main class="container">
+        <!-- SECTION ABOUT ME -->
+        <section id="about" class="section-content">
+            <h2 class="section-title">About Me</h2>
+            <div class="project-item">
+                <p>
+                    Information Systems undergraduate specialized in crafting intuitive digital experiences and leading product lifecycle from concept to launch. Driven by UI/UX design, user research, and product strategy.
+                </p>
             </div>
+        </section>
+
+        <!-- SECTION PROJECTS -->
+        <section id="projects" class="section-content">
+            <h2 class="section-title">Projects</h2>
             
-            <p>
-                <strong>MyStyle — Branded Fashion E-Commerce</strong><br>
-                A mobile e-commerce platform designed for branded fashion shopping. Focused on creating an intuitive user experience, seamless checkout flow, and a clean, modern aesthetic.
-            </p>
-        </div>
+            <div class="project-item">
+                <h3>Copyin - Printing & Stationeries App</h3>
+                <div class="project-gallery">
+                    <img src="image/preview_fix 1.png" alt="Preview Copyin 1" class="project-img">
+                    <img src="image/preview_fix 2.png" alt="Preview Copyin 2" class="project-img">
+                    <img src="image/preview_fix 3.png" alt="Preview Copyin 3" class="project-img">
+                </div>
+                <p>
+                    <strong>MyStyle — Branded Fashion E-Commerce</strong><br>
+                    A mobile e-commerce platform designed for branded fashion shopping. Focused on creating an intuitive user experience, seamless checkout flow, and a clean, modern aesthetic.
+                </p>
+            </div>
 
-        <!-- PROJECT 2 -->
-        <div class="project-item">
-            <h3>Project 2</h3>
-            <p>Deskripsi singkat project kedua.</p>
-        </div>
+            <div class="project-item">
+                <h3>Project 2</h3>
+                <p>Deskripsi singkat project kedua.</p>
+            </div>
+        </section>
 
-        <!-- CONTACT SECTION -->
-        <section id="contact" class="contact-section">
+        <!-- SECTION CONTACT -->
+        <section id="contact" class="section-content">
             <h2 class="section-title">Contact</h2>
             <p class="contact-card">
                 Email: <a href="mailto:raihanaufadhia20@gmail.com">raihanaufadhia20@gmail.com</a>
@@ -84,7 +84,6 @@
         </section>
     </main>
 
-    <!-- FILE SCRIPT JS -->
     <script src="script.js"></script>
 </body>
 </html>
