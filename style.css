@@ -100,15 +100,14 @@ h3 {
     box-sizing: border-box;
 }
 
-/* Penyesuaian gambar agar pas di dalam kartu */
 .project-img {
-    width: 100%;          /* Lebar gambar mengikuti lebar kartu */
-    max-width: 100%;      /* Gambar tidak akan lebih lebar dari kartu */
-    height: auto;         /* Tinggi gambar menyesuaikan proporsi asli */
-    max-height: 250px;    /* Batas tinggi maksimal gambar */
-    object-fit: cover;    /* Gambar otomatis terpotong rapi tanpa gepeng */
+    width: 100%;
+    max-width: 100%;
+    height: auto;          /* Mengikuti proporsi asli gambar */
+    max-height: 450px;     /* Bebaskan tingginya supaya mockup HP muat utuh */
+    object-fit: contain;   /* Menampilkan seluruh gambar tanpa memotong sama sekali */
     border-radius: 8px;
     margin: 12px 0;
     border: 1px solid #30363d;
-    display: block;       /* Menghilangkan celah bawah elemen gambar */
+    display: block;
 }
