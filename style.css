@@ -5,59 +5,92 @@
 }
 
 body {
-    font-family: 'Segoe UI', Roboto, sans-serif;
-    background-color: #f0f4f8; /* Background soft blue-gray */
-    color: #1e293b;
+    font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
+    background-color: #0d1117;
+    color: #c9d1d9;
     line-height: 1.6;
-    max-width: 720px;
-    margin: 50px auto;
-    padding: 0 20px;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
 }
 
-/* Header Nama */
+.container {
+    max-width: 680px;
+    width: 100%;
+}
+
+/* Header Utama */
 h1 {
     font-size: 2.4rem;
-    color: #0f172a;
+    font-weight: 700;
+    color: #f0f6fc;
+    letter-spacing: -0.02em;
 }
 
-/* Subtitle */
-h1 + p {
-    color: #2563eb; /* Biru terang */
+/* Sub-title & Animasi Ketik */
+.sub-title {
+    color: #58a6ff;
     font-weight: 600;
-    margin-bottom: 30px;
+    font-size: 1.05rem;
+    margin-top: 6px;
+    margin-bottom: 28px;
+    min-height: 1.6em;
 }
 
-/* Sub-judul Section */
+.cursor {
+    display: inline-block;
+    background-color: #58a6ff;
+    width: 2px;
+    margin-left: 2px;
+    animation: blink 0.8s infinite;
+}
+
+@keyframes blink {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0; }
+}
+
+/* Section Title */
 h2 {
-    font-size: 1.3rem;
-    color: #1e40af;
-    border-bottom: 3px solid #3b82f6; /* Garis tebal biru */
-    padding-bottom: 6px;
-    margin-top: 30px;
-    margin-bottom: 15px;
+    font-size: 1.25rem;
+    color: #8b949e;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    border-bottom: 1px solid #30363d;
+    padding-bottom: 8px;
+    margin-top: 36px;
+    margin-bottom: 16px;
 }
 
-/* Judul Project */
+/* Project Sub-title */
 h3 {
-    color: #0f172a;
-    margin-top: 10px;
+    color: #f0f6fc;
+    font-size: 1.1rem;
+    margin-bottom: 6px;
 }
 
-/* Kartu Project Berwarna */
-h3 + p {
-    background: #ffffff;
-    padding: 16px;
+/* Box & Hover Styles */
+.card-text, .project-item, .contact-card {
+    background-color: #161b22;
+    border: 1px solid #30363d;
     border-radius: 10px;
-    border-left: 5px solid #2563eb; /* Aksen garis biru di kiri */
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.08);
-    margin-bottom: 15px;
+    padding: 18px 20px;
+    margin-bottom: 14px;
+    transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Kartu Kontak */
-h2:last-of-type + p {
-    background: #e0e7ff;
-    color: #3730a3;
-    padding: 14px 18px;
-    border-radius: 8px;
+.card-text:hover, .project-item:hover, .contact-card:hover {
+    transform: translateY(-3px);
+    border-color: #58a6ff;
+    box-shadow: 0 4px 12px rgba(88, 166, 255, 0.15);
+}
+
+.contact-card a {
+    color: #58a6ff;
+    text-decoration: none;
     font-weight: 500;
+}
+
+.contact-card a:hover {
+    text-decoration: underline;
 }
